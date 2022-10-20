@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { useFetch } from "../../../hooks"
 import { ItemDetail } from "./ItemDetail"
+import { useFetch } from "../../../hooks"
 
 export const ItemDetailContainer = () => {
 
