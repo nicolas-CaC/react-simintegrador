@@ -17,6 +17,7 @@ export const Router = () => {
                 <Route path='/contacto' element={ <Contacto /> } />
                 <Route path='/item/:id' element={ <ItemDetailContainer /> } />
                 <Route path='/inicio' element={ <ItemListContainer /> } />
+                <Route path='/home' element={ <ItemListContainer /> } />
                 <Route path='*' element={ <ItemListContainer /> } />
             </Routes>
         </LoginLayout>
