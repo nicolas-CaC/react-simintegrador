@@ -1,10 +1,12 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { Link } from "react-router-dom"
+import { CartContext } from "../Cart"
 
 export const Navbar = () => {
 
-    const opciones = ['Inicio', 'Perfil', 'Contacto']
+    const { cartCount } = useContext(CartContext)
     const [active, setActive] = useState(window.location.pathname)
+    const opciones = ['Inicio', 'Perfil', 'Contacto']
 
     function activeLink(opcion) {
         const rutaActual = `/${opcion.toLowerCase()}`
@@ -27,6 +29,14 @@ export const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
+
+                        { cartCount > 0 && <Link
+                            to='carrito'
+                            className="btn btn-light rounded-pill fs-6 fw-bold me-3"
+                        >
+                            { cartCount }
+                        </Link> }
+
                         { opciones.map(opcion =>
                             <Link
                                 key={ opcion }
