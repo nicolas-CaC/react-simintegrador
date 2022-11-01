@@ -45,3 +45,4 @@ export const commonLogin = async (name, pass, error) => {
         console.log('Error en el login:', err)
     }
 }
+
