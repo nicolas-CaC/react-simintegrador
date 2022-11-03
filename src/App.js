@@ -4,6 +4,7 @@ import { MainLayout } from './components/layouts';
 import { Navbar } from './components/Navbar';
 import { Router } from './components/router';
 import './App.css';
+import { Componente } from './firebase/schemas/productoSchema';
 
 function App() {
   return (
